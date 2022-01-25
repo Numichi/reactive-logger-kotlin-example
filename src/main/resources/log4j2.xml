@@ -1,0 +1,17 @@
+<Configuration packages="io.github.numichi.reactive.logger.kotlin.example.log4j2">
+    <Appenders>
+        <Console name="ExampleLog">
+            <ExamplePlugin/>
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <Root level="info">
+            <!-- nothing -->
+        </Root>
+
+        <AsyncLogger name="io.github.numichi.reactive.logger.kotlin.example.controller.ExampleController" level="info">
+            <AppenderRef ref="ExampleLog"/>
+        </AsyncLogger>
+    </Loggers>
+</Configuration>
